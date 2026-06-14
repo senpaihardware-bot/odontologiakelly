@@ -1,3 +1,4 @@
+console.log("SCRIPT CARGADO");
 document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   year.textContent = new Date().getFullYear();
@@ -18,19 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
   revealItems.forEach((item) => observer.observe(item));
 
   const floatingWhatsapp = document.getElementById("floatingWhatsapp");
-  floatingWhatsapp.addEventListener("click", () => {
-    window.open("https://wa.me/573223454042", "_blank", "noopener");
-  });
 
+  if (floatingWhatsapp) {
+    floatingWhatsapp.addEventListener("click", () => {
+      window.open("https://wa.me/573223454042", "_blank", "noopener");
+    });
+  }
   const form = document.getElementById("contactForm");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
     const message = document.getElementById("message").value.trim();
-
-    const text = `Hola, mi nombre es ${name}. Mi celular es ${phone}. ${message}`;
+    const text = `Hola, mi nombre es ${name}. ${message}`;
     const url = `https://wa.me/573223454042?text=${encodeURIComponent(text)}`;
 
     window.open(url, "_blank", "noopener");

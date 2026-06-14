@@ -815,7 +815,7 @@ textarea {
 }
 @media (max-width: 768px) {
   .top-social {
-    display: none;
+    display: block;
   }
 }
 .footer-bottom p {
@@ -825,10 +825,18 @@ textarea {
 
 @media (max-width: 768px) {
   .top-social-content {
-    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    gap: 10px;
+  }
+  .top-info,
+  .top-links {
+    justify-content: center;
   }
 
+  .top-links a {
+    padding: 6px 10px;
+  }
   .footer-bottom-content {
     justify-content: center;
     text-align: center;

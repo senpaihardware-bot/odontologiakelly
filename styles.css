@@ -831,7 +831,7 @@ textarea {
   }
   .top-info,
   .top-links {
-    justify-content: center;
+    display: none;
   }
 
   .top-links a {
@@ -907,7 +907,20 @@ textarea {
     display: none;
   }
 }
+@media (max-width: 768px) {
+  .trust {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .top-info {
+    display: none;
+  }
 
+  .hero-stats {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .hero {
     padding-top: 40px;
@@ -924,13 +937,14 @@ textarea {
     min-height: 68px;
   }
 
-  .hero-stats,
   .trust-grid,
   .services-grid,
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-
+  .hero-stats {
+    display: none;
+  }
   .hero h1 {
     font-size: 2.8rem;
   }
